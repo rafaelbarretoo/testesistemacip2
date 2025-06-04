@@ -157,9 +157,10 @@ if os.path.exists(arquivo):
     #st.dataframe(media_colunas.to_frame(name="Média").T)
 
     # Matriz de análise
-    st.markdown("#### Matriz de Análise: Problema vs Solução")
-    if "Média Problema" in df.columns and "Impacto da Solução" in df.columns:
-        fig_matrix = px.scatter(
+    with st.expander("**Matriz de Análise: Problema vs Solução**"):
+        st.markdown("#### Matriz de Análise: Problema vs Solução")
+        if "Média Problema" in df.columns and "Impacto da Solução" in df.columns:
+            fig_matrix = px.scatter(
             df,
             x="Média Problema",
             y="Média Solução",
@@ -169,8 +170,8 @@ if os.path.exists(arquivo):
             color_discrete_sequence=px.colors.qualitative.Dark24,
             height=500
         )
-        fig_matrix.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
-        st.plotly_chart(fig_matrix, use_container_width=True)
+            fig_matrix.update_layout(plot_bgcolor='rgba(0,0,0,0)', paper_bgcolor='rgba(0,0,0,0)')
+            st.plotly_chart(fig_matrix, use_container_width=True)
 
     with st.expander("**Estatísticas por Critério**"):
         st.markdown("Estatísticas por Critério")
