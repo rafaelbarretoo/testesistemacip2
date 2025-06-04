@@ -125,7 +125,7 @@ st.markdown("""
 
 # Seleção de avaliador
 nomes_usuarios = ["Aline Oliveira","André Diniz", "Guilherme Carrijo","Leonardo Briza", 
-                 "Marcelo Gallo","Monica Vargas", "Patricia Testai", "Paulo Ravagnani"]
+                 "Marcelo Gallo","Monica Vargas", "Patricia Testai", "Paulo Ravagnani", "Rodrigo Dib"]
 avaliador = st.selectbox("**Selecione seu nome:**", nomes_usuarios, index=None, placeholder="Escolha seu nome...")
 
 # CRITÉRIOS - PROBLEMA
